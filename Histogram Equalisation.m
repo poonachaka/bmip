@@ -1,0 +1,15 @@
+Clc;close all;clear all;
+a=imread(‘CT Brain.jpg’);
+b=histeq(a);
+subplot(2,2,1);
+imshow(a);
+title(‘original image’);
+subplot(2,2,2);
+imshow(b);
+title(‘after histogram equalisation’);
+subplot(2,2,3);
+imshow(a);
+title(‘original histogram’);
+subplot(2,2,4);
+imshow(b);
+title(‘after histogram equalisation’);

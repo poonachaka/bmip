@@ -1,0 +1,15 @@
+Clc ; clear all; close all;
+i=imread(‘ultrasound fetus.jpg’);
+subplot(1,3,1);
+imshow(i);
+title(‘original image’);
+f1=fspecial(‘average’);
+Ip=imfilter(i,f1);
+subplot(1,3,2);
+imshow(Ip);
+title(‘Low pass filtered image’);
+f2=fspecial(‘unsharp’);
+Hp=imfilter(i,f2);
+subplot(1,3,3);
+imshow(Hp);
+title(‘High pass filtered image’);

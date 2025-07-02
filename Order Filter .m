@@ -1,0 +1,17 @@
+Clc ; clear all ; close all; 
+a=imread(‘CT Brain.jpg’);
+o1=ordfilt2(a,1,ones(3,3));
+o2=ordfilt2(a,9,ones(3,3));
+o3=ordfilt2(a,5,ones(3,3));
+subplot(1,4,1);
+imshow(a);
+title(‘original image’);
+subplot(1,4,2);
+imshow(o1);
+title(‘Min filter image’);
+subplot(1,4,3);
+imshow(o2);
+title(‘Max filter image’);
+subplot(1,4,4);
+imshow(o3);
+title(‘Median filter image’);
